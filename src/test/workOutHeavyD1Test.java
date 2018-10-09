@@ -2,7 +2,7 @@ package test;
 
 import org.junit.Test;
 
-public class worKOutHeavyD1Test {
+public class workOutHeavyD1Test {
 
     @Test
     public void testSquats() {}
