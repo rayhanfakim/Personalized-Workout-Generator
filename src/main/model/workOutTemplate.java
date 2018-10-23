@@ -2,41 +2,40 @@ package main.model;
 
 public interface workOutTemplate {
 
-    public void ex1(int i);
+    public void exC1(int i);
 
-    public void ex2(int i);
+    public void exC2(int i);
 
-    public void ex3(int i);
+    public void exC3(int i);
 
-    public void ex4(int i);
+    public void exC4(int i);
 
-    public void ex5(int i);
+    public void exC5(int i);
 
-    public void ex6(int i);
+    public void exC6(int i);
 
-    public void ex7(int i);
+    public void exC7(int i);
 
-    public void ex8(int i);
+    public void exC8(int i);
 
-    public void ex9(int i);
+    public void exD1(int i);
 
-    public void ex10(int i);
+    public void exD2(int i);
 
-    public void ex11(int i);
+    public void exD3(int i);
 
-    public void ex12(int i);
+    public void exD4(int i);
 
-    public void ex13(int i);
+    public void exD5(int i);
 
-    public void ex14(int i);
+    public void exD6(int i);
 
-    public void ex15(int i);
+    public void exD7(int i);
 
-    public void ex16(int i);
+    public void exD8(int i);
 
-    public void ex17(int i);
+    public void exD9(int i);
 
-    public void ex18(int i);
-
+    public void exD10(int i);
 
 }
