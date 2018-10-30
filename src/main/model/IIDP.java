@@ -1,5 +1,7 @@
 package main.model;
 
+import main.ui.Interactions;
+
 public class IIDP extends Program {
 
     int restCompound = 240;
@@ -18,7 +20,7 @@ public class IIDP extends Program {
                 System.out.println("Double-Leg Knee Extensions x10 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -31,7 +33,7 @@ public class IIDP extends Program {
                 System.out.println("Leg Press (Explosive Tempo) x10 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -44,7 +46,7 @@ public class IIDP extends Program {
                 System.out.println("Overhead Dumbbell Tricep Extensions x10 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -57,7 +59,7 @@ public class IIDP extends Program {
                 System.out.println("Cable Tricep Extensions x10 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -70,7 +72,7 @@ public class IIDP extends Program {
                 System.out.println("Leg Raises x12 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -83,7 +85,7 @@ public class IIDP extends Program {
                 System.out.println("Lateral Raise Machine x12 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -96,7 +98,7 @@ public class IIDP extends Program {
                 System.out.println("Dumbbell Lateral Raises x15 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -109,7 +111,7 @@ public class IIDP extends Program {
                 System.out.println("Barbell Rows x8 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -122,7 +124,7 @@ public class IIDP extends Program {
                 System.out.println("Lateral Raises x10 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -135,7 +137,7 @@ public class IIDP extends Program {
                 System.out.println("Goblet Bulgarian Slip Squats  x12 @" + i + "lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 

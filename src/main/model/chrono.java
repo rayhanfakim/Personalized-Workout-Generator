@@ -22,7 +22,6 @@ public class chrono {
                 } catch (InterruptedException e) { }
             }
 
-
             if (operation==2) {
                 try {
                     countDown c = new countDown(0);
@@ -31,11 +30,11 @@ public class chrono {
 
             else if (operation==3) {
                 System.out.println("I am done for this exercise! ");
-                return; }
+                return;
             }
         }
-
     }
+}
 
     class countDown {
         public countDown(int x) throws InterruptedException {

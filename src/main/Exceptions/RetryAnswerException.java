@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class RetryAnswerException extends Exception {
 
-public RetryAnswerException(){
+    public RetryAnswerException() {
+        System.out.println("Wrong input, please retry.");
 
-}
+    }
 }

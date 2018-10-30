@@ -1,5 +1,7 @@
 package main.model;
 
+import main.ui.Interactions;
+
 public class IIIDP extends Program {
 
     int restCompound    = 320;
@@ -19,7 +21,7 @@ public class IIIDP extends Program {
                 System.out.println("Light Bench Press x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -32,7 +34,7 @@ public class IIIDP extends Program {
                 System.out.println("Roman Chair Leg Raises x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -45,7 +47,7 @@ public class IIIDP extends Program {
                 System.out.println("Weighted Hip Thrusts x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -58,7 +60,7 @@ public class IIIDP extends Program {
                 System.out.println("Single-Leg Knee Extensions x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -71,7 +73,7 @@ public class IIIDP extends Program {
                 System.out.println("Dumbbell Lateral Raises x15 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -84,7 +86,7 @@ public class IIIDP extends Program {
                 System.out.println("Light Low Bar Back Squats x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -98,7 +100,7 @@ public class IIIDP extends Program {
                 System.out.println("Med. Ball Oblique Twists x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -111,7 +113,7 @@ public class IIIDP extends Program {
 //                System.out.println("Reverse Curls x10 @"+i+"lbs");
 //                exRest = new chrono(restAccessories);
 //            }
-//            System.out.println("Done!");
+//            Interactions.followingStatementEx(9);
 //        }
     }
 
@@ -124,7 +126,7 @@ public class IIIDP extends Program {
 //                System.out.println("Reverse Curls x10 @"+i+"lbs");
 //                exRest = new chrono(restAccessories);
 //            }
-//            System.out.println("Done!");
+//            Interactions.followingStatementEx(9);
 //        }
     }
 
@@ -137,7 +139,7 @@ public class IIIDP extends Program {
                 System.out.println("Seated Shoulder x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
@@ -149,7 +151,7 @@ public class IIIDP extends Program {
                 System.out.println("Tricep Cable Pulldowns x10 @"+i+"lbs");
                 exRest = new chrono(restAccessories);
             }
-            System.out.println("Done!");
+            Interactions.followingStatementEx(9);
         }
     }
 
