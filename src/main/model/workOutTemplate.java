@@ -2,7 +2,7 @@ package main.model;
 
 public interface workOutTemplate {
 
-    public void exC1(int i);
+    public void exC1(int i) throws InterruptedException;
 
     public void exC2(int i);
 
