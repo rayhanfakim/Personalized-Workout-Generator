@@ -3,7 +3,6 @@ package main.model;
 import java.util.Objects;
 
 public class Day {
-
     private int day;
 
     public Day(int day) {
@@ -31,4 +30,12 @@ public class Day {
 
         return Objects.hash(day);
     }
+
+    @Override
+    public String toString() {
+        return "Day{" +
+                "day=" + day +
+                '}';
+    }
 }
+

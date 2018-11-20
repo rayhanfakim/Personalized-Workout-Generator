@@ -1,9 +1,7 @@
-package main.newui;
+package main.ui;
 
-import main.newmodel.Day;
-import main.newmodel.Exercise;
-import main.newmodel.Program;
-import main.newmodel.TwoDayProgram;
+import main.model.Day;
+import main.model.Exercise;
 
 import java.util.ArrayList;
 import java.util.HashMap;

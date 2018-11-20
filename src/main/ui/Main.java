@@ -1,16 +1,18 @@
-package main.newui;
+package main.ui;
 
-import main.newmodel.*;
+import main.model.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     // TODO replace "user.home" with file location - put in the app itself
@@ -27,13 +29,48 @@ public class Main {
 
         Interactions.welcome();
 
+        try {
+            URL weatherAPI = new URL("https://weather.gc.ca/rss/city/bc-74_e.xml");
+            try (BufferedReader weatherFeedReader = new BufferedReader(new InputStreamReader(weatherAPI.openStream()))){
+                StringBuilder weatherReportStringBuilder = new StringBuilder();
+                String line;
+                while ((line = weatherFeedReader.readLine()) != null){
+                    weatherReportStringBuilder.append(line).append("\n");
+                }
+
+                String weatherReport = weatherReportStringBuilder.toString();
+               System.out.println(weatherReport); //0.7
+                Pattern dataPattern = Pattern.compile("<b>Condition:<\\/b> (.+?) <br\\/>\n<b>Temperature:<\\/b> (\\d+(?:\\.\\d+)?)&deg;C <br\\/>");
+                Matcher dataMatcher = dataPattern.matcher(weatherReport);
+
+                if (dataMatcher.find()) {
+                    String condition = dataMatcher.group(1);
+                    String temperature = dataMatcher.group(2);
+
+                    System.out.println("Today's weather is looking: "+condition+" !");
+                    System.out.println("And the temperature is: "+temperature+" degrees C.\n");
+
+                } else {
+                    System.out.println("Weather unavailable.");
+                }
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+
+
         User user;
 
         System.out.println("Enter your name: ");
         // TODO replace all input() with input()
         String name = input(); // TODO If name found in list of previous name entered, restore weights
 
-        System.out.println("Enter your height (cm): ");
+        System.out.println("Enter your height (cm): "); // todo put in the bodymassindex
         int height;
         while (true) {
             String input = input();
@@ -45,7 +82,7 @@ public class Main {
             }
         }
 
-        System.out.println("Enter your weight (kg): ");
+        System.out.println("Enter your weight (kg): "); // todo put in the bodymassindex
         int weight;
         while (true) {
             String input = input();
@@ -57,7 +94,7 @@ public class Main {
             }
         }
 
-        double BMI = ((weight / height) / height);
+        double BMI = ((weight / height) / height); // todo put in the bodymassindex
         System.out.println("\nYour BMI is:" + BMI);
 
         user = new User(name, height, weight);
@@ -67,7 +104,14 @@ public class Main {
         while (true) {
             String input = input();
             prg = Integer.parseInt(input);
-            if (prg == 1) {
+            if (prg == 1) { // TODO change the [1] for more info
+                // TODO Deliverable: DONE Print out all programs (Composite)
+                List<Program> programs = new ArrayList<>();
+                programs.add(new TwoDayProgram("P1", Setup.twoDaysProgramExerciseMap));
+                programs.add(new ThreeDayProgram("P2", Setup.threeDaysProgramExerciseMap));
+                for (Program program : programs) {
+                    program.print();
+                }
                 //user.setProgram();
                 break;
             } else if (prg == 2) {

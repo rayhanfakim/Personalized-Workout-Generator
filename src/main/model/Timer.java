@@ -1,4 +1,4 @@
-package main.newmodel;
+package main.model;
 
 import java.util.concurrent.TimeUnit;
 

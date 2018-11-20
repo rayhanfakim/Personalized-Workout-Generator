@@ -1,6 +1,6 @@
 package main.Exceptions;
 
-import main.newui.Interactions;
+import main.ui.Interactions;
 
 public class InvalidProgramException extends RetryAnswerException {
     public InvalidProgramException(){

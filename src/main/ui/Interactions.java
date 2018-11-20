@@ -1,21 +1,30 @@
-package main.newui;
+package main.ui;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import main.model.OpenWebpage;
+import main.model.Program;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import static main.ui.Main.input;
 
 public class Interactions {
 
     public Interactions(String S){
     }
+
+    String name = input();
+
 // TODO: Do French version
     public static void welcome() {
-        System.out.println("Welcome to the personalized workout generator!\n");
+        System.out.println("Welcome to the personalized workout generator!");
 
 //        System.out.println("Bienvenue au generateur d'exercice personalisee! \n");
     }
 
     public static void allProgram(){
         System.out.println("Which program are you currently working on?");
-        System.out.println("[1] For more the programs");
+        System.out.println("[1] For more informations about the programs");
         System.out.println("[2] Two   days program");
         System.out.println("[3] Three days program");
 
@@ -30,7 +39,26 @@ public class Interactions {
 
     public static void programChoice(int i){
         if (i == 1){
-            System.out.println("You are on the stretching program.\n");
+            System.out.println("\nThis workout generator was created by Rayhan Fakim. Feel free to contact him by:");
+            System.out.println("[1] Email \n[2] LinkedIn \n ");
+            int contact;
+            while (true) {
+                String input = input();
+                contact = Integer.parseInt(input);
+                if (contact == 1) {
+                    System.out.println("rayhan.fakim@gmail.com");
+                    break;
+                } else if (contact == 2) {
+                    try {
+                        OpenWebpage.openWebpage(new URL("http://www.linkedin.com/in/rayhanfakim/")); // TODO check this
+                    } catch (MalformedURLException ignored) {
+                        // ignored exception, because it can never occur since the url always exists
+                    }
+                    break;
+                } else {
+                    System.out.println("That is not a valid input");
+                }
+            }
         }
         else{
             System.out.println("You are on the "+i+" days program.\n");
