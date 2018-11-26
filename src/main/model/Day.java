@@ -33,9 +33,7 @@ public class Day {
 
     @Override
     public String toString() {
-        return "Day{" +
-                "day=" + day +
-                '}';
+        return "Day " + day;
     }
 }
 

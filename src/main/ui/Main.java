@@ -20,7 +20,8 @@ public class Main {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
-
+        FXApp.launch();
+        System.exit(0);
         // TODO printing out which exercise to perform for the user
 
         // TODO implementing timer in newmodel.Main
@@ -39,7 +40,7 @@ public class Main {
                 }
 
                 String weatherReport = weatherReportStringBuilder.toString();
-               System.out.println(weatherReport); //0.7
+                // System.out.println(weatherReport); //0.7
                 Pattern dataPattern = Pattern.compile("<b>Condition:<\\/b> (.+?) <br\\/>\n<b>Temperature:<\\/b> (\\d+(?:\\.\\d+)?)&deg;C <br\\/>");
                 Matcher dataMatcher = dataPattern.matcher(weatherReport);
 

@@ -1,9 +1,9 @@
 package main.model;
 
-import java.awt.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
+        import java.awt.*;
+        import java.net.URI;
+        import java.net.URISyntaxException;
+        import java.net.URL;
 
 public class OpenWebpage {
 

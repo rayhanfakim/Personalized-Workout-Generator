@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.QuitController">
+   <children>
+      <ImageView fitHeight="291.0" fitWidth="519.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/Users/rayhanfakim/Library/Mobile%20Documents/com~apple~CloudDocs/UBC/Winter%202018/CPSC%20210/Labs/Project/projectw1_team108/images/giphy.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="done" layoutX="437.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Done" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="29.0" layoutY="231.0" prefHeight="43.0" prefWidth="397.0" text="YOU MADE IT! CONGRATS!!" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
