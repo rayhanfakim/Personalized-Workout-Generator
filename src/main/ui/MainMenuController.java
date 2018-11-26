@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputEvent;
@@ -25,6 +26,7 @@ public class MainMenuController {
     @FXML
     private Label BMILabel;
 
+
     @FXML
     private void quit(){
         System.exit(0);
@@ -45,6 +47,13 @@ public class MainMenuController {
     private void openAbout(InputEvent inputEvent) throws MalformedURLException {
 
         OpenWebpage.openWebpage(new URL("https://www.linkedin.com/in/rayhanfakim/"));
+
+    }
+
+    @FXML
+    private void openBMI(InputEvent inputEvent) throws MalformedURLException {
+
+        OpenWebpage.openWebpage(new URL("https://bmicalculator.mes.fm/bmi-chart"));
 
     }
 

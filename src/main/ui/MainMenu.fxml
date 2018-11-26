@@ -22,13 +22,13 @@
       </Label>
       <TextField fx:id="height" layoutX="133.0" layoutY="72.0" />
       <TextField fx:id="weight" layoutX="133.0" layoutY="118.0" />
-      <Button layoutX="167.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#calculateBMI" prefHeight="27.0" prefWidth="133.0" text="Calculate" />
+      <Button layoutX="218.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#calculateBMI" prefHeight="27.0" prefWidth="82.0" text="Calculate" />
       <ImageView fitHeight="141.0" fitWidth="154.0" layoutX="337.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:/Users/rayhanfakim/Library/Mobile%20Documents/com~apple~CloudDocs/UBC/Winter%202018/CPSC%20210/Labs/Project/projectw1_team108/images/img_387532.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#openAbout" text="About" />
+      <Button layoutX="14.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#openAbout" prefHeight="27.0" prefWidth="63.0" text="Author" />
       <Button layoutX="437.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#selectProgram" prefHeight="27.0" prefWidth="55.0" text="Next" />
       <Button layoutX="369.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Quit" />
       <Label layoutX="23.0" layoutY="120.0" text="Weight (kg):">
@@ -46,5 +46,6 @@
             <Font name="Calibri" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="151.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#openBMI" prefHeight="27.0" prefWidth="63.0" text="Info" />
    </children>
 </Pane>

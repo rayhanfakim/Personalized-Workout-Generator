@@ -41,15 +41,12 @@ public class SelectDayController implements Initializable{
         if(days.getItems().size() > 0){
             days.getSelectionModel().selectFirst();
         }
-
     }
 
     private void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Exercise.fxml"));
         Parent root = loader.load();
-
         FXApp.stage.setScene(new Scene(root));
         FXApp.stage.show();
     }
-
 }

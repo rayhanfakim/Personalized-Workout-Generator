@@ -19,6 +19,7 @@ public class FXApp extends Application {
 
 
     @Override
+    // loading first scene
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 
@@ -28,7 +29,9 @@ public class FXApp extends Application {
     }
 
     public static void main(String[] args) {
+        // setup from previous main, to get all the data
         new Setup();
+        // From FXApp
         launch(args);
     }
 

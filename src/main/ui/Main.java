@@ -20,8 +20,8 @@ public class Main {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
-        FXApp.launch();
-        System.exit(0);
+//        FXApp.launch();
+//        System.exit(0);
         // TODO printing out which exercise to perform for the user
 
         // TODO implementing timer in newmodel.Main

@@ -47,50 +47,65 @@ public class ExerciseController implements Initializable {
 
     @FXML
     private void nextCycle(MouseEvent mouseEvent) throws IOException {
+        //When the button is pressed, to reset all new details
         if (exercises.size() == 1) {
+            // There is no more exercise left to do, go to quit scene
             loadNextScene();
+
         } else if (sets.getText().equals("0")) {
+            // If the number of sets is 0, update exercise:
+            // Remove the exercise from the list
             exercises.remove(0);
+
+            // Get new exercise
             Exercise newExercise = exercises.get(0);
+            // Update new details of exercise, with weight, name, sets, and time
             weight.setText("" + newExercise.getWeightExercise());
             name.setText("" + newExercise.getName());
             sets.setText("" + newExercise.getSets());
+            // Added plus one, for two have it exactly at the nice number
             time = newExercise.getRest() + 1;
 
-//            chronoTimer.setTime(newExercise.getRest());
-//            chronoTimer.countDown();
         } else {
+            // Update the timer label
             sets.setText("" + (Integer.parseInt(sets.getText()) - 1));
             time = exercises.get(0).getRest() + 1;
-//            chronoTimer.setTime(exercises.get(0).getRest());
-//            chronoTimer.countDown();
+
         }
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // Instantiate new list, list of exercise chosen by the program and day  (for the first one ever)
         exercises = FXApp.program.getExercises().get(FXApp.day);
+
+        // Get the first exercise of the list
         Exercise firstExercise = exercises.get(0);
+
+        // Update, the weights, name and sets, and timer
         weight.setText("" + firstExercise.getWeightExercise());
         name.setText("" + firstExercise.getName());
         sets.setText("" + firstExercise.getSets());
+        // Plus one to make it nicer
         time = firstExercise.getRest() + 1;
         timer.setText("" + time);
+
+        // Running the timer in a different tread, so that the we can click on the button
+        // and not being blocked until the countdown is over
         ScheduledExecutorService timerService = Executors.newSingleThreadScheduledExecutor();
 
+        // the method of the timer is running separately
         timerService.scheduleAtFixedRate((Runnable) () -> {
             time--;
             Platform.runLater(() -> timer.setText("" + time));
         },0, 1, TimeUnit.SECONDS);
 
-//        chronoTimer = Timer.create(2);
-//        chronoTimer = Timer.create(firstExercise.getRest());
-//        chronoTimer.countDown();
-//        chronoTimer.addObserver(this);
+
     }
 
     private void loadNextScene() throws IOException {
+        // Load next scene, quit scene, "congratulations"
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Quit.fxml"));
         Parent root = loader.load();
 
@@ -98,8 +113,5 @@ public class ExerciseController implements Initializable {
         FXApp.stage.show();
     }
 
-//    @Override
-//    public void update(Observable o, Object arg) {
-//        timer.setText("" + chronoTimer.getRemaining());
-//    }
+
 }
