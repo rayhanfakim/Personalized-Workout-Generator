@@ -93,13 +93,15 @@ public class ExerciseController implements Initializable {
 
         // Running the timer in a different tread, so that the we can click on the button
         // and not being blocked until the countdown is over
+        // http://tutorials.jenkov.com/java-util-concurrent/scheduledexecutorservice.html
         ScheduledExecutorService timerService = Executors.newSingleThreadScheduledExecutor();
 
         // the method of the timer is running separately
         timerService.scheduleAtFixedRate((Runnable) () -> {
+            if (!(time ==0)){
             time--;
             Platform.runLater(() -> timer.setText("" + time));
-        },0, 1, TimeUnit.SECONDS);
+        }},0, 1, TimeUnit.SECONDS);
 
 
     }

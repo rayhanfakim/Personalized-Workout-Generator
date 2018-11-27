@@ -12,7 +12,11 @@ import main.model.Program;
 
 public class FXApp extends Application {
 
-    static String name;
+    // https://www.youtube.com/watch?v=Z1W4E2d4Yxo -- Scene builder
+    // https://www.youtube.com/watch?v=T3NlWMzPyXM -- Implement in IntelliJ
+
+
+//    static String name;
     static Stage stage;
     static Program program;
     static Day day;

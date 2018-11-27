@@ -23,6 +23,8 @@ public class SelectDayController implements Initializable{
     ListView<Day> days;
 
     @FXML
+    // Next button, after selecting the day (change the field of day to the day selected,
+    // in order to bring the list of ex of that day), load next scene
     public void startExercise(MouseEvent mouseEvent) throws IOException {
         FXApp.day = days.getSelectionModel().getSelectedItem();
         loadNextScene();
@@ -34,6 +36,7 @@ public class SelectDayController implements Initializable{
         if (FXApp.program == Program.DEFAULT_TWO_DAY_PROGRAM) {
             dayList = FXCollections.observableArrayList(new Day(1), new Day(2));
         } else {
+            // else, must be the three day program
             dayList = FXCollections.observableArrayList(new Day(1), new Day(2), new Day(3));
         }
         days.setItems(dayList);
@@ -43,6 +46,7 @@ public class SelectDayController implements Initializable{
         }
     }
 
+    // Load next scene -> Exercise scene
     private void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Exercise.fxml"));
         Parent root = loader.load();

@@ -36,9 +36,10 @@ public class MainMenuController {
     private void calculateBMI(InputEvent inputEvent){
         double h = Double.parseDouble(height.getText());
         double w = Double.parseDouble(weight.getText());
-
+        // calculate BMI from input
         double BMI = ((w / h) / h);
 
+        // Update BMI label with calculated BMI
         BMILabel.setText(Double.toString(BMI));
 
     }

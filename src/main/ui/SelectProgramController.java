@@ -17,6 +17,7 @@ public class SelectProgramController {
     }
 
     @FXML
+    // TwoDayProgram button, create new program in the field and load new scene
     public void selectTwoDayProgram(MouseEvent mouseEvent) throws IOException {
         FXApp.program = Program.DEFAULT_TWO_DAY_PROGRAM;
 
@@ -25,6 +26,7 @@ public class SelectProgramController {
     }
 
     @FXML
+    // ThreeDayProgram button, create new program in the field and load new scene
     public void selectThreeDayProgram(MouseEvent mouseEvent) throws IOException {
         FXApp.program = Program.DEFAULT_THREE_DAY_PROGRAM;
 
@@ -32,6 +34,7 @@ public class SelectProgramController {
 
     }
 
+    // Next screen loader -> SelectDay Scene
     private void loadNextScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SelectDay.fxml"));
         Parent root = loader.load();
