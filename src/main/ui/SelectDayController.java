@@ -27,7 +27,7 @@ public class SelectDayController implements Initializable{
     // in order to bring the list of ex of that day), load next scene
     public void startExercise(MouseEvent mouseEvent) throws IOException {
         FXApp.day = days.getSelectionModel().getSelectedItem();
-        loadNextScene();
+        loadNextScene("Exercise.fxml");
     }
 
     @Override
@@ -46,9 +46,20 @@ public class SelectDayController implements Initializable{
         }
     }
 
-    // Load next scene -> Exercise scene
-    private void loadNextScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Exercise.fxml"));
+    @FXML
+    private void quit(){
+        System.exit(0);
+    }
+
+    @FXML
+    public void back(MouseEvent mouseEvent) throws IOException {
+        loadNextScene("SelectProgram.fxml");
+    }
+
+    @FXML
+    // Load next scene -> Exercise scene/Quit/Back
+    private void loadNextScene(String s) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(s));
         Parent root = loader.load();
         FXApp.stage.setScene(new Scene(root));
         FXApp.stage.show();

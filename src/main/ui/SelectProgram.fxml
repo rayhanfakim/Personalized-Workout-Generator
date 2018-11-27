@@ -29,6 +29,7 @@
             <Image url="file:/Users/rayhanfakim/Library/Mobile%20Documents/com~apple~CloudDocs/UBC/Winter%202018/CPSC%20210/Labs/Project/projectw1_team108/images/17-175607_gym-dumbbell-weight-strong-comments-gym-icon-png.png" />
          </image>
       </ImageView>
-      <Button layoutX="443.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Quit" />
+      <Button layoutX="12.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Quit" />
+      <Button layoutX="78.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
    </children>
 </Pane>

@@ -21,7 +21,7 @@ public class SelectProgramController {
     public void selectTwoDayProgram(MouseEvent mouseEvent) throws IOException {
         FXApp.program = Program.DEFAULT_TWO_DAY_PROGRAM;
 
-        loadNextScene();
+        loadNextScene("SelectDay.fxml");
 
     }
 
@@ -30,18 +30,23 @@ public class SelectProgramController {
     public void selectThreeDayProgram(MouseEvent mouseEvent) throws IOException {
         FXApp.program = Program.DEFAULT_THREE_DAY_PROGRAM;
 
-        loadNextScene();
+        loadNextScene("SelectDay.fxml");
 
     }
 
-    // Next screen loader -> SelectDay Scene
-    private void loadNextScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SelectDay.fxml"));
+    public void back(MouseEvent mouseEvent) throws IOException {
+        loadNextScene("MainMenu.fxml");
+    }
+
+    // Next screen loader -> SelectDay/MainMenu Scene
+    private void loadNextScene(String s) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(s));
         Parent root = loader.load();
 
         FXApp.stage.setScene(new Scene(root));
         FXApp.stage.show();
     }
+
 
 }
 

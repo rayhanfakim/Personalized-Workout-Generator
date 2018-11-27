@@ -28,9 +28,9 @@
             <Image url="file:/Users/rayhanfakim/Library/Mobile%20Documents/com~apple~CloudDocs/UBC/Winter%202018/CPSC%20210/Labs/Project/projectw1_team108/images/img_387532.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#openAbout" prefHeight="27.0" prefWidth="63.0" text="Author" />
+      <Button layoutX="361.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#openAbout" prefHeight="27.0" prefWidth="63.0" text="Author" />
       <Button layoutX="437.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#selectProgram" prefHeight="27.0" prefWidth="55.0" text="Next" />
-      <Button layoutX="369.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Quit" />
+      <Button layoutX="14.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="27.0" prefWidth="55.0" text="Quit" />
       <Label layoutX="23.0" layoutY="120.0" text="Weight (kg):">
          <font>
             <Font name="Calibri" size="18.0" />
