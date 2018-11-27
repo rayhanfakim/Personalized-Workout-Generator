@@ -50,7 +50,7 @@ public class ExerciseController implements Initializable {
         //When the button is pressed, to reset all new details
         if (exercises.size() == 1) {
             // There is no more exercise left to do, go to quit scene
-            loadNextScene();
+            loadNextScene("Quit.fxml");
 
         } else if (sets.getText().equals("0")) {
             // If the number of sets is 0, update exercise:
@@ -106,9 +106,9 @@ public class ExerciseController implements Initializable {
 
     }
 
-    private void loadNextScene() throws IOException {
+    private void loadNextScene(String s) throws IOException {
         // Load next scene, quit scene, "congratulations"
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Quit.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(s));
         Parent root = loader.load();
 
         FXApp.stage.setScene(new Scene(root));
@@ -116,4 +116,13 @@ public class ExerciseController implements Initializable {
     }
 
 
+    @FXML
+    private void quit(){
+        System.exit(0);
+    }
+
+    @FXML
+    private void back(MouseEvent mouseEvent) throws IOException {
+        loadNextScene("SelectDay.fxml");
+    }
 }
