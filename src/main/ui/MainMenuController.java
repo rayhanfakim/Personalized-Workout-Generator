@@ -54,7 +54,7 @@ public class MainMenuController {
     @FXML
     private void openBMI(InputEvent inputEvent) throws MalformedURLException {
 
-        OpenWebpage.openWebpage(new URL("https://bmicalculator.mes.fm/bmi-chart"));
+        OpenWebpage.openWebpage(new URL("https://www.unicarestateplan.com/pdf/bmiFlyer.pdf"));
 
     }
 
