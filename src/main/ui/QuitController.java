@@ -13,6 +13,7 @@ public class QuitController {
     public Button done;
 
     @FXML
+    // quit button
     private void quit(){
         System.exit(0);
     }

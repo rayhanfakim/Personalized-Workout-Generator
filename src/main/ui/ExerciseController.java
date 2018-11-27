@@ -46,15 +46,16 @@ public class ExerciseController implements Initializable {
     public Button nextSet;
 
     @FXML
+    // 'done' button
     private void nextCycle(MouseEvent mouseEvent) throws IOException {
         //When the button is pressed, to reset all new details
         if (exercises.size() == 1) {
-            // There is no more exercise left to do, go to quit scene
+            // There is no more exercise left to do, go to quit scene (you made it)
             loadNextScene("Quit.fxml");
 
         } else if (sets.getText().equals("0")) {
             // If the number of sets is 0, update exercise:
-            // Remove the exercise from the list
+            // Remove the done exercise from the list
             exercises.remove(0);
 
             // Get new exercise
@@ -63,11 +64,11 @@ public class ExerciseController implements Initializable {
             weight.setText("" + newExercise.getWeightExercise());
             name.setText("" + newExercise.getName());
             sets.setText("" + newExercise.getSets());
-            // Added plus one, for two have it exactly at the nice number
+            // Added plus one, for to have it exactly at the nice number timer
             time = newExercise.getRest() + 1;
 
         } else {
-            // Update the timer label
+            // if there is sets left, update only the timer label
             sets.setText("" + (Integer.parseInt(sets.getText()) - 1));
             time = exercises.get(0).getRest() + 1;
 
@@ -91,21 +92,22 @@ public class ExerciseController implements Initializable {
         time = firstExercise.getRest() + 1;
         timer.setText("" + time);
 
-        // Running the timer in a different tread, so that the we can click on the button
+        // Running the timer in a different tread, so that when we can click on the button
         // and not being blocked until the countdown is over
         // http://tutorials.jenkov.com/java-util-concurrent/scheduledexecutorservice.html
         ScheduledExecutorService timerService = Executors.newSingleThreadScheduledExecutor();
 
         // the method of the timer is running separately
         timerService.scheduleAtFixedRate((Runnable) () -> {
-            if (!(time ==0)){
-            time--;
+            if (!(time == 0)){ // check if timer is not yet 0
+            time--; // decrement the timer
             Platform.runLater(() -> timer.setText("" + time));
         }},0, 1, TimeUnit.SECONDS);
 
 
     }
 
+    // load next scene
     private void loadNextScene(String s) throws IOException {
         // Load next scene, quit scene, "congratulations"
         FXMLLoader loader = new FXMLLoader(getClass().getResource(s));
@@ -117,11 +119,13 @@ public class ExerciseController implements Initializable {
 
 
     @FXML
+    // 'quit' button
     private void quit(){
         System.exit(0);
     }
 
     @FXML
+    // 'back' button
     private void back(MouseEvent mouseEvent) throws IOException {
         loadNextScene("SelectDay.fxml");
     }

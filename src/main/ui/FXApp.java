@@ -39,6 +39,7 @@ public class FXApp extends Application {
         launch(args);
     }
 
+    // Quit Button
     public static void quit(){
         System.exit(0);
     }

@@ -18,16 +18,20 @@ import java.net.URL;
 public class MainMenuController {
 
     @FXML
+    // Input of height
     private TextField height;
 
     @FXML
+    // Input of weight
     private TextField weight;
 
     @FXML
+    // Show the BMI result
     private Label BMILabel;
 
 
     @FXML
+    // Quit Button
     private void quit(){
         System.exit(0);
     }
@@ -45,6 +49,7 @@ public class MainMenuController {
     }
 
     @FXML
+    // 'Author' button
     private void openAbout(InputEvent inputEvent) throws MalformedURLException {
 
         OpenWebpage.openWebpage(new URL("https://www.linkedin.com/in/rayhanfakim/"));
@@ -52,6 +57,7 @@ public class MainMenuController {
     }
 
     @FXML
+    // 'Info' button
     private void openBMI(InputEvent inputEvent) throws MalformedURLException {
 
         OpenWebpage.openWebpage(new URL("https://www.unicarestateplan.com/pdf/bmiFlyer.pdf"));
@@ -59,6 +65,7 @@ public class MainMenuController {
     }
 
     @FXML
+    // 'Next' Scene, load scene to select the program
     private void selectProgram(InputEvent inputEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SelectProgram.fxml"));
         Parent root = loader.load();
